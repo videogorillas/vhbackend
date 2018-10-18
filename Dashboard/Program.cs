@@ -15,7 +15,7 @@ namespace Dashboard
         public static void Main()
         {
             // get the element that mounts the app
-            var appRoot = Document.GetElementById("app");
+            var appRoot = Document.GetElementById("app"); 
             // create the user interface
             var userInterface = View("Mike");
             // attach the user interface to the root node
