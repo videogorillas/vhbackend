@@ -44,13 +44,40 @@
       <HintPath>..\packages\Bridge.React.4.2.0\lib\net40\Bridge.React.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Retyped.Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Retyped.dom, Version=2.8.2.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Retyped.es5, Version=2.8.2.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Retyped.scripthost, Version=2.8.2.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Bridge.rt\addons\DialogwithImage.cs" />
+    <Compile Include="Bridge.rt\addons\DialogWithImageProps.cs" />
+    <Compile Include="Bridge.rt\addons\StyledInput.cs" />
+    <Compile Include="Bridge.rt\addons\StyledInputProps.cs" />
+    <Compile Include="Bridge.rt\BaseComponent.cs" />
+    <Compile Include="Bridge.rt\Dialog.cs" />
+    <Compile Include="Bridge.rt\DialogProps.cs" />
+    <Compile Include="Bridge.rt\Input.cs" />
+    <Compile Include="Bridge.rt\InputProps.cs" />
+    <Compile Include="Bridge.rt\Props.cs" />
+    <Compile Include="LoginApp.cs" />
+    <Compile Include="LoginPageComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
