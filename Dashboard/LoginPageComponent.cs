@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using Bridge;
 using Bridge.Html5;
 using Bridge.React;
+using Dashboard.Bridge.rt.addons;
 
 namespace Dashboard
 {
@@ -32,6 +32,11 @@ namespace Dashboard
             childrens.Add(emailInput);
             childrens.Add(passwordInput);
             
+            DialogWithImageProps p = new DialogWithImageProps("dwi");
+            p.type = "small";
+            p.active = true;
+            p.background = "white";
+            
             ReactElement dialog = DialogWithImage(childrens);
             
             return DOM.Div(
@@ -47,7 +52,7 @@ namespace Dashboard
             );
         }
         
-        public static ReactElement HeaderWhite(string key, string s) 
+        public ReactElement HeaderWhite(string key, string s) 
         {
             return DOM.H2(
                 new Attributes
@@ -61,17 +66,30 @@ namespace Dashboard
             );
         }
 
-        public static ReactElement LoginInput()
+        public ReactElement LoginInput()
         {
-            return null;
+            StyledInputProps props = new StyledInputProps("e");
+            props.type = "email";
+            props.value = state.l;
+            props.label = "Email";
+            props.onChange = new Function("s", "state.l = s; setState(state)");
+
+            var reactElement = new StyledInput(props);
+            return reactElement;
         }
 
-        public static ReactElement PasswdInput()
+        public ReactElement PasswdInput()
         {
-            return null;
+            StyledInputProps props = new StyledInputProps("p");
+            props.type = "password";
+            props.label = "Password";
+            props.value = state.p;
+            props.onChange = new Function("s", "state.p = s; setState(state");
+            var reactElement = new StyledInput(props);
+            return reactElement;
         }
 
-        public static ReactElement DialogWithImage(ReactElementList childrens)
+        public ReactElement DialogWithImage(ReactElementList childrens)
         {
             return null;
         }
