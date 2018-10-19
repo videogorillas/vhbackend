@@ -1,0 +1,37 @@
+### Not authorized
+
+GET http://localhost:5000/api/auth/user
+
+> {%  client.test(response.status != 200); %}
+
+
+
+### Login request
+
+POST http://localhost:5000/api/auth/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ "id": "admin", password: "admin" }
+
+> {%
+client.assert(response.status == 200, "not ok");
+client.global.set("token", response.headers.valueOf("Set-Cookie"));
+%}
+
+
+
+### Get user data
+
+GET http://localhost:5000/api/auth/user
+Cookie: {{token}}
+
+
+
+### Logout
+
+GET http://localhost:5000/api/auth/logout
+Cookie: {{token}}
+
+###
